@@ -28,4 +28,17 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public int GetScore()
+    {
+        return GameManager.instance.Score;
+    }
+
+    public  bool IsNewRecord()
+    {
+        int currentScore = GameManager.instance.Score;
+
+        int record = PlayerPrefs.GetInt("Record", 0);
+        return currentScore > record;
+    }
 }
