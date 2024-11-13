@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     const float jumpForce = 8;
-    Rigidbody2D rigidbody2D;
+    new Rigidbody2D rigidbody2D;
     UIManager managerUI;
 
     private void Start()

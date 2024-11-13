@@ -6,7 +6,7 @@ public class Obstacles : MonoBehaviour
 {
     float speed = 3.5f;
 
-    Rigidbody2D rigidbody2D;
+    new Rigidbody2D rigidbody2D;
 
     private void Start()
     {
