@@ -17,24 +17,9 @@ public class UIManager : MonoBehaviour
 
     public void GameOver()
     {
-        int currentScore = GameManager.instance.Score;
-        int record = PlayerPrefs.GetInt("Record", 0);
-
-        finalScoreText.text = currentScore.ToString();
-
-
-        if(currentScore > record)
-        {
-            PlayerPrefs.SetInt("Record",currentScore);
-            PlayerPrefs.Save();
-            recordText.text = currentScore.ToString();
-        }
-        else
-        {
-            recordText.text = currentScore.ToString() ;
-        }
+        finalScoreText.text = GameManager.instance.Score.ToString();
+        recordText.text = PlayerPrefs.GetInt("Record").ToString();
         gameOverWindow.SetActive(true);
-
         Time.timeScale = 0;
     }
 
@@ -49,6 +34,13 @@ public class UIManager : MonoBehaviour
         
         return GameManager.instance.Score;
     }
+    public bool IsNewRecord()
+    {
+        int currentScore = GameManager.instance.Score;
+        int record = PlayerPrefs.GetInt("Record", 0);
 
-   
+        return currentScore > record;
+    }   
+
+
 }

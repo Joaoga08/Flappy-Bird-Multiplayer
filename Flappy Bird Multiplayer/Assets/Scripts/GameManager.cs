@@ -24,7 +24,15 @@ public class GameManager : MonoBehaviour
 
     Vector2 screenBounds;
     int score;
+    
 
     public Vector2 ScreenBounds { get => screenBounds; }
     public int Score { get => score; set => score = value; }
+
+    private void Start()
+    {
+       
+    }
+
+   
 }

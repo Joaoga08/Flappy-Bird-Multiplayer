@@ -8,9 +8,13 @@ public class Obstacles : MonoBehaviour
 
     new Rigidbody2D rigidbody2D;
 
+  
+
     private void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+
+      
     }
 
     private void Update()
