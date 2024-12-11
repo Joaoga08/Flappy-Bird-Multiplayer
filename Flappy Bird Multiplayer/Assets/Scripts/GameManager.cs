@@ -9,11 +9,11 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }
-        else if(instance != this)
+        else if (instance != this)
         {
             Destroy(gameObject);
         }
@@ -24,15 +24,7 @@ public class GameManager : MonoBehaviour
 
     Vector2 screenBounds;
     int score;
-    
 
     public Vector2 ScreenBounds { get => screenBounds; }
     public int Score { get => score; set => score = value; }
-
-    private void Start()
-    {
-       
-    }
-
-   
 }
